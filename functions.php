@@ -5,8 +5,9 @@
  *
  * load the theme function files
  */
+
+//require_once('wp_bootstrap_navwalker.php');
 //import javascripts
-require_once('wp_bootstrap_navwalker.php');
 function fleck_scripts_with_jquery()
 {
 	// Register the script like this for a theme:
@@ -97,7 +98,11 @@ function fleck_widgets_init() {
 
 add_action( 'widgets_init', 'fleck_widgets_init' );
 
-
+// custom admin footer, adds your details in wordpress admin board
+function remove_footer_admin () {
+echo 'Fueled by <a href="http://www.wordpress.org" target="_blank">WordPress</a> | Designed by <a href="http://www.sharmaprakash.com.np" target="_blank">Prakash Poudel</a></p>';
+}
+add_filter('admin_footer_text', 'remove_footer_admin');
 
 
 
