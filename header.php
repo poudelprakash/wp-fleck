@@ -52,11 +52,10 @@
             
                 <div class="col-md-5 column">
                     <a href="<?php echo home_url( );?>">
-                        <!--<img width="75" height="75" src="<?php esc_url( get_template_directory_uri() ); ?>/images/logo_300.png" class="img-rounded" /></a> 
-                        -->
-                    <h1><?php bloginfo('name'); ?></h1> 
+                       
+                    <h2><?php bloginfo('name'); ?></h2> 
                     </a>
-                    <br /><?php bloginfo('description' ); ?> 
+                    <?php bloginfo('description' ); ?> 
 
                 </div>
 
@@ -79,6 +78,7 @@
                             'container_class' => 'collapse navbar-collapse navbar-ex1-collapse',
                             'menu_class'      => 'nav navbar-nav',
                             'menu_id'         => 'main-menu',
+                            'depth' => '3'
                             //'walker'          => new Cwd_wp_bootstrapwp_Walker_Nav_Menu()
                         ) );
                       ?>

@@ -6,29 +6,31 @@
  * load the theme function files
  */
 //import javascripts
-function wpbootstrap_scripts_with_jquery()
+require_once('wp_bootstrap_navwalker.php');
+function fleck_scripts_with_jquery()
 {
 	// Register the script like this for a theme:
 	wp_register_script( 'custom-script', get_template_directory_uri() . '/bootstrap/js/bootstrap.js', array( 'jquery' ) );
 	// For either a plugin or a theme, you can then enqueue the script:
 	wp_enqueue_script( 'custom-script' );
 }
-add_action( 'wp_enqueue_scripts', 'wpbootstrap_scripts_with_jquery' );
+add_action( 'wp_enqueue_scripts', 'fleck_scripts_with_jquery' );
+
 
 //create nav menu
-	if (!function_exists('fleck_theme_setup')) :
-	function fleck_theme_setup() {
+	if (!function_exists('fleck_menu_setup')) :
+	function fleck_menu_setup() {
 		//adds the main menu
 		register_nav_menus(array(
-			'main-menu'=> __('Main Menu','fleck_theme'),
+			'main-menu'=> __('Main Menu','fleck_menu'),
 			) );
 		}
 	endif;
-	add_action('after_setup_theme','fleck_theme_setup' );
+	add_action('after_setup_theme','fleck_menu_setup' );
 
 
 // breadcrumb snippet from http://cazue.com/articles/wordpress-creating-breadcrumbs-without-a-plugin-2013 
-function the_breadcrumb() {
+function fleck_breadcrumb() {
     global $post;
     echo '<ol class="breadcrumb">';
     if (!is_home()) {
@@ -68,4 +70,35 @@ function the_breadcrumb() {
     elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
     echo '</ol>';
 }
+
+//this code adds sidebars | code was found at http://www.wpbeginner.com/wp-themes/how-to-add-dynamic-widget-ready-sidebars-in-wordpress/
+function fleck_widgets_init() {
+
+    register_sidebar( array(
+        'name' => __( 'Main Sidebar', 'wpb' ),
+        'id' => 'sidebar-1',
+        'description' => __( 'The main sidebar appears on the right on each page except the front page template', 'wpb' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name' =>__( 'Front page sidebar', 'wpb'),
+        'id' => 'sidebar-2',
+        'description' => __( 'Appears on the static front page template', 'wpb' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    }
+
+add_action( 'widgets_init', 'fleck_widgets_init' );
+
+
+
+
+
 ?>
