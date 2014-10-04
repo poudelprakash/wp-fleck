@@ -1,0 +1,23 @@
+/*
+Theme Name: Fleck
+Theme URI: https://github.com/prakash014/wp-fleck
+Author: Prakash Poudel Sharma
+Author URI: http://www.sharmaprakash.com.np/
+Description: This is a theme developed by prakash poudel starting from 22nd september
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: fleck
+
+This theme, like WordPress, is licensed under the GPL.
+this theme needs to be purchased from Prakash Poudel Sharma before using for commercial purpose
+
+*/
+@import url('bootstrap/css/bootstrap.css'); 
+@import url('bootstrap/css/bootstrap-responsive.css'); 
+@import url('font-awesome/css/font-awesome.min.css');
+body { 
+     padding-top: 70px; 
+     
+}
+
