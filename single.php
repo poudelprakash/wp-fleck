@@ -1,161 +1,132 @@
-<?php get_header();?>
-<!-- Page Content -->
-    <div class="container">
+<?php
+/**
+ * Single Posts Template
+ *
+ *
+ * @file           single.php
+ * @package        StanleyWP
+ * @author         Brad Williams & Carlos Alvarez
+ * @copyright      2011 - 2014 Gents Themes
+ * @license        license.txt
+ * @version        Release: 3.0.3
+ * @link           http://codex.wordpress.org/Theme_Development#Single_Post_.28single.php.29
+ * @since          available since Release 1.0
+ */
+?>
+<?php get_header(); ?>
 
+<div id="content">
+
+  <?php if ( have_posts() ) : ?>
+
+  <?php while ( have_posts() ) : the_post(); ?>
+
+  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+    <div id="white">
+      <div class="container">
         <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+          <!-- this is breadcrumb -->
+          <?php the_breadcrumb(); ?>
+ 
+           <section class="post-meta">
+            <p class="author-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?><ba><?php the_author_meta( 'display_name' ); ?></ba></p>
+            <p><bd><time class="post-date"><?php the_date(); ?></time></bd></p>
+          </section><!-- end of .post-meta -->
 
-            <!-- Blog Post Content Column -->
-            <div class="col-lg-8">
+          <h4><?php the_title(); ?></h4>
 
-                <!-- Blog Post -->
 
-                <!-- Title -->
-                <h1>Blog Post Title</h1>
+          <?php if ( has_post_thumbnail() ) : ?>
 
-                <!-- Author -->
-                <p class="lead">
-                    by <a href="#">Start Bootstrap</a>
-                </p>
+          <p><?php the_post_thumbnail(); ?></p>
+        <?php endif; ?>
 
-                <hr>
+        <section class="post-entry">
+          <?php the_content(); ?>
 
-                <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+          <?php if ( get_the_author_meta( 'description' ) != '' ) : ?>
 
-                <hr>
+          <div id="author-meta">
+            <?php if ( function_exists( 'get_avatar' ) ) { echo get_avatar( get_the_author_meta( 'email' ), '80' ); }?>
+            <div class="about-author"><?php _e( 'About', 'gents' ); ?> <?php the_author_posts_link(); ?></div>
+            <p><?php the_author_meta( 'description' ) ?></p>
+          </div><!-- end of #author-meta -->
 
-                <!-- Preview Image -->
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+        <?php endif; // no description, no author's meta ?>
 
-                <hr>
 
-                <!-- Post Content -->
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
+        
 
-                <hr>
 
-                <!-- Blog Comments -->
+                          </section><!-- end of .post-entry -->
 
-                <!-- Comments Form -->
-                <div class="well">
-                    <h4>Leave a Comment:</h4>
-                    <form role="form">
-                        <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
+
+
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-
-                <hr>
-
-                <!-- Posted Comments -->
-
-                <!-- Comment -->
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                      </div>
                     </div>
-                </div>
+                  </div>
+                </article><!-- end of #post-<?php the_ID(); ?> -->
 
-                <!-- Comment -->
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                        <!-- Nested Comment -->
-                        <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="http://placehold.it/64x64" alt="">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">Nested Start Bootstrap
-                                    <small>August 25, 2014 at 9:30 PM</small>
-                                </h4>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                            </div>
-                        </div>
-                        <!-- End Nested Comment -->
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+
+                      <?php comments_template( '', true ); ?>
+
                     </div>
+                  </div>
                 </div>
 
-            </div>
+              <?php endwhile; ?>
 
-            <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
+              <?php if (  $wp_query->max_num_pages > 1 ) : ?>
 
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Blog Search</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                    </div>
-                    <!-- /.input-group -->
-                </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-8 col-lg-offset-2">
 
-                <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Blog Categories</h4>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /.row -->
-                </div>
+                    <nav class="navigation">
+                     <div class="previous"><?php next_posts_link( __( '&#8249; Older posts', 'gents' ) ); ?></div>
+                     <div class="next"><?php previous_posts_link( __( 'Newer posts &#8250;', 'gents' ) ); ?></div>
+                   </nav><!-- end of .navigation -->
 
-                <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                </div>
+                 </div>
+               </div>
+             </div>
+           <?php endif; ?>
 
-            </div>
+         <?php else : ?>
 
-        </div>
-        <!-- /.row -->
+         <article id="post-not-found" class="hentry clearfix">
 
-        <hr>
+           <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-lg-offset-2">
+                <header>
+                 <h1 class="title-404"><?php _e( '404 &#8212; Fancy meeting you here!', 'gents' ); ?></h1>
+               </header>
+               <section>
+                 <p><?php _e( 'Don&#39;t panic, we&#39;ll get through this together. Let&#39;s explore our options here.', 'gents' ); ?></p>
+               </section>
+               <footer>
+                 <h6><?php _e( 'You can return', 'gents' ); ?> <a href="<?php echo home_url(); ?>/" title="<?php esc_attr_e( 'Home', 'gents' ); ?>"><?php _e( '&#9166; Home', 'gents' ); ?></a> <?php _e( 'or search for the page you were looking for', 'gents' ); ?></h6>
+                 <?php get_search_form(); ?>
+               </footer>
 
-       <?php get_footer(); ?>
+             </div>
+           </div>
+         </div>
+
+       </article>
+
+
+     <?php endif; ?>
+
+   </div><!-- end of #content -->
+
+
+
+   <?php get_footer(); ?>
