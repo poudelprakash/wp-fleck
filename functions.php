@@ -6,7 +6,6 @@
  * load the theme function files
  */
 
-//require_once('wp_bootstrap_navwalker.php');
 require_once(get_template_directory().'/inc/template-tags.php');
 //import javascripts
 function fleck_scripts_with_jquery()
