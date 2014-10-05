@@ -21,3 +21,261 @@ this theme needs to be purchased from Prakash Poudel Sharma before using for com
 body{
 	padding-top: 1px;
 }
+
+**
+ * 7.0 Sidebars
+ * -----------------------------------------------------------------------------
+ */
+
+/* Secondary */
+
+#secondary {
+	background-color: #000;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	clear: both;
+	color: rgba(255, 255, 255, 0.7);
+	margin-top: -1px;
+	padding: 0 10px;
+	position: relative;
+	z-index: 2;
+}
+
+.site-description {
+	display: none;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+/* Primary Sidebar */
+
+.primary-sidebar {
+	padding-top: 48px;
+}
+
+.secondary-navigation + .primary-sidebar {
+	padding-top: 0;
+}
+
+/* Content Sidebar */
+
+.content-sidebar {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+	color: #767676;
+	padding: 48px 10px 0;
+}
+
+
+/**
+ * 7.1 Widgets
+ * -----------------------------------------------------------------------------
+ */
+
+/* Primary Sidebar, Footer Sidebar */
+
+.widget {
+	font-size: 14px;
+	-webkit-hyphens: auto;
+	-moz-hyphens:    auto;
+	-ms-hyphens:     auto;
+	hyphens:         auto;
+	line-height: 1.2857142857;
+	margin-bottom: 48px;
+	width: 100%;
+	word-wrap: break-word;
+}
+
+.widget a {
+	color: #000;
+}
+
+.widget a:hover {
+	color: #41a62a;
+}
+
+.widget h1,
+.widget h2,
+.widget h3,
+.widget h4,
+.widget h5,
+.widget h6 {
+	margin: 24px 0 12px;
+}
+
+.widget h1 {
+	font-size: 22px;
+	line-height: 1.0909090909;
+}
+
+.widget h2 {
+	font-size: 20px;
+	line-height: 1.2;
+}
+
+.widget h3 {
+	font-size: 18px;
+	line-height: 1.3333333333;
+}
+
+.widget h4 {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.widget h5 {
+	font-size: 14px;
+	line-height: 1.7142857142;
+}
+
+.widget h6 {
+	font-size: 12px;
+	line-height: 2;
+}
+
+.widget address {
+	margin-bottom: 18px;
+}
+
+.widget abbr[title] {
+	border-color: rgba(255, 255, 255, 0.7);
+}
+
+.widget mark,
+.widget ins {
+	color: #000;
+}
+
+.widget pre,
+.widget fieldset {
+	border-color: rgba(255, 255, 255, 0.2);
+}
+
+.widget code,
+.widget kbd,
+.widget tt,
+.widget var,
+.widget samp,
+.widget pre {
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.widget blockquote {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 18px;
+}
+
+.widget blockquote cite {
+	color: #fff;
+	font-size: 14px;
+	line-height: 1.2857142857;
+}
+
+.widget dl,
+.widget dd {
+	margin-bottom: 18px;
+}
+
+.widget ul,
+.widget ol {
+	list-style: none;
+	margin: 0;
+}
+
+.widget li > ol,
+.widget li > ul {
+	margin-left: 10px;
+}
+
+.widget table,
+.widget th,
+.widget td {
+	border-color: rgba(255, 255, 255, 0.2);
+}
+
+.widget table {
+	margin-bottom: 18px;
+}
+
+.widget del {
+	color: rgba(255, 255, 255, 0.4);
+}
+
+.widget hr {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.widget p {
+	margin-bottom: 18px;
+}
+
+.widget-area .widget input,
+.widget-area .widget textarea {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-color: rgba(255, 255, 255, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 1px 2px 2px 4px;
+}
+
+.widget-area .widget input:focus,
+.widget-area .widget textarea:focus {
+	border-color: rgba(255, 255, 255, 0.3);
+}
+
+.widget button,
+.widget .button,
+.widget input[type="button"],
+.widget input[type="reset"],
+.widget input[type="submit"] {
+	background-color: #24890d;
+	border: 0;
+	font-size: 12px;
+	padding: 5px 15px 4px;
+}
+
+.widget input[type="button"]:hover,
+.widget input[type="button"]:focus,
+.widget input[type="reset"]:hover,
+.widget input[type="reset"]:focus,
+.widget input[type="submit"]:hover,
+.widget input[type="submit"]:focus {
+	background-color: #41a62a;
+}
+
+.widget input[type="button"]:active,
+.widget input[type="reset"]:active,
+.widget input[type="submit"]:active {
+	background-color: #55d737;
+}
+
+.widget .wp-caption {
+	color: rgba(255, 255, 255, 0.7);
+	margin-bottom: 18px;
+}
+
+.widget .widget-title {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.7142857142;
+	margin: 0 0 24px 0;
+	text-transform: uppercase;
+}
+
+.widget-title,
+.widget-title a {
+	color: #000;
+}
+
+.widget-title a:hover {
+	color: #41a62a;
+}
+
+
