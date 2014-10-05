@@ -7,7 +7,7 @@
  * It is used to display a page when nothing more specific matches a query,
  * e.g., it puts together the home page when no home.php file exists.
  *
- * @file           header.php
+ * @file           index.php
  * @package        Fleck
  * @author         Prakash poudel
  * @copyright      2014 Prakash Poudel
@@ -17,31 +17,36 @@
  * @since          available since Release 1.0
  */
  ?>
+ <?php get_header( ); ?>
 
-<?php
-	get_header(); 
-	include('jumbotron.php');
-?>
-	<div class="container">
-		<div class="row clearfix">
-			<div class="col-md-6 column">
-				 <span class="label label-default">From The Blog</span>
-				 
-				 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-			    <p><em><?php the_time('l, F jS, Y'); ?></em></p>
-			    <p><?php the_excerpt(); ?> </p>
-			    <hr />
+ <div class="container">
+	<div class="row clearfix">
+		<div class="col-md-9 column">
+			<?php 
+			fleck_breadcrumb();
+			if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<h1><?php the_title(); ?></h1>
+				<p><em><?php the_time('l, F jS, Y'); ?></em></p>
 
-			    <?php endwhile; else: ?>
-			      <p><?php _e('Sorry, there are no posts.'); ?></p>
-			    <?php endif; ?>
-			</div>
-			<div class="col-md-6 column">
+			  	<?php the_content(); ?>
+
+			  
+
+			<?php endwhile; else: ?>
+				<p><?php _e('Sorry, this page does not exist.'); ?></p>
+			<?php endif; ?>
+		 
+		</div>
+				<!-- Blog Sidebar Widgets Column -->
+		<div class="col-md-3 column">
+			<div class="well">
+				<?php 
+					//this is for sidebar
+					get_sidebar( ); ?>
 			</div>
 		</div>
 	</div>
+	<hr />
+</div>
 
-	
-
-<?php get_footer(); ?>
+ <?php get_footer( ); ?>
