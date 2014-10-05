@@ -38,7 +38,7 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-		<hr />
+		<hr />k
 	</div>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
