@@ -16,8 +16,8 @@ this theme needs to be purchased from Prakash Poudel Sharma before using for com
 @import url('bootstrap/css/bootstrap.css'); 
 @import url('bootstrap/css/bootstrap-responsive.css'); 
 @import url('font-awesome/css/font-awesome.min.css');
-body { 
-     padding-top: 70px; 
-     
-}
 
+
+body{
+	padding-top: 1px;
+}

@@ -7,6 +7,7 @@
  */
 
 //require_once('wp_bootstrap_navwalker.php');
+require_once(get_template_directory().'/inc/template-tags.php');
 //import javascripts
 function fleck_scripts_with_jquery()
 {
@@ -36,7 +37,7 @@ function fleck_breadcrumb() {
     echo '<ol class="breadcrumb">';
     if (!is_home()) {
         echo '<li><a href="';
-        echo get_option('home');
+        echo home_url( );
         echo '">';
         echo 'Home';
         echo '</a></li>';
@@ -76,9 +77,9 @@ function fleck_breadcrumb() {
 function fleck_widgets_init() {
 
     register_sidebar( array(
-        'name' => __( 'Main Sidebar', 'wpb' ),
+        'name' => __( 'Main Sidebar', 'fleck' ),
         'id' => 'sidebar-1',
-        'description' => __( 'The main sidebar appears on the right on each page except the front page template', 'wpb' ),
+        'description' => __( 'The main sidebar appears on the right on each page except the front page template', 'fleck' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h3 class="widget-title">',
@@ -86,9 +87,9 @@ function fleck_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' =>__( 'Front page sidebar', 'wpb'),
+        'name' =>__( 'Front page sidebar', 'fleck'),
         'id' => 'sidebar-2',
-        'description' => __( 'Appears on the static front page template', 'wpb' ),
+        'description' => __( 'Appears on the static front page template', 'fleck' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h3 class="widget-title">',
@@ -97,6 +98,13 @@ function fleck_widgets_init() {
     }
 
 add_action( 'widgets_init', 'fleck_widgets_init' );
+
+// Changing excerpt more
+   function new_excerpt_more($more) {
+   global $post;
+   return '… <a href="'. get_permalink($post->ID) . '">' . 'Read More &raquo;' . '</a>';
+   }
+   add_filter('excerpt_more', 'new_excerpt_more');
 
 // custom admin footer, adds your details in wordpress admin board
 function remove_footer_admin () {

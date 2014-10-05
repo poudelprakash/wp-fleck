@@ -48,18 +48,8 @@
 	
     <!--header-->
     <div class="container">
-        <div class="row clearfix">
-            
-                <div class="col-md-5 column">
-                    <a href="<?php echo home_url( );?>">
-                       
-                    <h2><?php bloginfo('name'); ?></h2> 
-                    </a>
-                    <?php bloginfo('description' ); ?> 
-
-                </div>
-
-                <div class="col-md-7 column">
+        <div class="row clearfix">   
+          <div class="col-md-12 column">
                     <!--nav menu-->
                     <nav class="navbar navbar-default" role="navigation">
                       <!-- Mobile display -->
@@ -75,17 +65,16 @@
                       <!-- Collect the nav links for toggling -->
                       <?php // Loading WordPress Custom Menu
                          wp_nav_menu( array(
-                            'container_class' => 'collapse navbar-collapse navbar-ex1-collapse',
+                            'container_class' => 'collapse navbar-collapse navbar-ex1-collapse ',
                             'menu_class'      => 'nav navbar-nav',
                             'menu_id'         => 'main-menu',
                             'depth' => '3'
                             //'walker'          => new Cwd_wp_bootstrapwp_Walker_Nav_Menu()
                         ) );
                       ?>
-                    </nav>           
-                </div>    
-        </div>
-    <hr />
-    </div>
+                    </nav>
+              </div>                           
+        </div><!--row clearfix div for navigation ends-->
+    </div><!--navbar container end-->
    
         
