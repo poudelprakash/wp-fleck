@@ -18,16 +18,28 @@
         <div class="container">
     <div class="row clearfix">
         <div class="col-md-4 column">
-             <address> <strong>Prakash Poudel Sharma</strong><br /> Newroad,<br /> Kathmandu, Nepal<br /></address>
+             <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
+                    <div id="secondary" class="widget-area" role="complementary">
+                    <?php dynamic_sidebar( 'footer-1' ); ?>
+                    </div>
+                <?php endif; ?>
         </div>
         <div class="col-md-4 column">
             <h3>
-                Twitter feed
+                <?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
+                    <div id="secondary" class="widget-area" role="complementary">
+                    <?php dynamic_sidebar( 'footer-2' ); ?>
+                    </div>
+                <?php endif; ?>
             </h3>
         </div>
         <div class="col-md-4 column">
             <h3>
-                Facebook feed
+                 <?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
+                    <div id="secondary" class="widget-area" role="complementary">
+                    <?php dynamic_sidebar( 'footer-3' ); ?>
+                    </div>
+                <?php endif; ?>
             </h3>
         </div>
     </div>

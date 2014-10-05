@@ -87,14 +87,35 @@ function fleck_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' =>__( 'Front page sidebar', 'fleck'),
-        'id' => 'sidebar-2',
-        'description' => __( 'Appears on the static front page template', 'fleck' ),
+        'name' =>__( 'Left-Footer', 'fleck'),
+        'id' => 'footer-1',
+        'description' => __( 'Appears on Left column footer', 'fleck' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ) );
+
+    register_sidebar( array(
+        'name' =>__( 'Mid-Footer', 'fleck'),
+        'id' => 'footer-2',
+        'description' => __( 'Appears on middle column footer', 'fleck' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name' =>__( 'Right-Footer', 'fleck'),
+        'id' => 'footer-3',
+        'description' => __( 'Appears on Right column footer', 'fleck' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    
     }
 
 add_action( 'widgets_init', 'fleck_widgets_init' );
