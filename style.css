@@ -17,6 +17,11 @@ this theme needs to be purchased from Prakash Poudel Sharma before using for com
 @import url('bootstrap/css/bootstrap-responsive.css'); 
 @import url('font-awesome/css/font-awesome.min.css');
 
+/* post thumbnail*/
+.attachment-post-thumbnail {
+float:left;
+margin:5px;
+}
 
 body{
 	padding-top: 1px;
