@@ -27,7 +27,13 @@ body{
 	padding-top: 1px;
 }
 
-**
+/*comment style*/
+.bypostauthor {
+background-color: #222; // style this however you want
+}
+
+
+/**
  * 7.0 Sidebars
  * -----------------------------------------------------------------------------
  */

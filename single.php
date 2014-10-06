@@ -13,7 +13,8 @@
 			  	<?php the_content(); ?>
 
 			  	<hr>
-				<?php comments_template(); ?>
+				<?php comments_template();
+				 ?>
 
 			<?php endwhile; else: ?>
 				<p><?php _e('Sorry, this page does not exist.'); ?></p>

@@ -133,7 +133,7 @@
 			</div>
 		</div>
 	</div>
-
+    <?php get_footer( );?>
     <div class="row clearfix">
         <div class="col-md-12 column">
             <p class="text-center">
@@ -141,8 +141,7 @@
             </p>
         </div>
     </div>
-    </body>   
-    </html>
+    
 
 	
 
