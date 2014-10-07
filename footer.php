@@ -16,6 +16,7 @@
  ?>
 <!--footer -->
         <div class="container">
+        <hr />
     <div class="row clearfix">
         <div class="col-md-4 column">
              <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
@@ -44,7 +45,13 @@
         </div>
     </div>
 </div>
-
+<div class="row clearfix">
+        <div class="col-md-12 column">
+            <p class="text-center">
+                All Rights Reserved By <strong>Prakash Poudel </strong>
+            </p>
+        </div>
+    </div>
 
 <!--here ends the footer -->
 <?php wp_footer(); ?>
