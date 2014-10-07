@@ -5,7 +5,7 @@
  *
  * load the theme function files
  */
-
+include('admin/theme_custom.php');
 //import javascripts
 function fleck_scripts_with_jquery()
 {
@@ -15,7 +15,6 @@ function fleck_scripts_with_jquery()
 	wp_enqueue_script( 'custom-script' );
 }
 add_action( 'wp_enqueue_scripts', 'fleck_scripts_with_jquery' );
-
 
 //create nav menu
 	if (!function_exists('fleck_menu_setup')) :

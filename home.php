@@ -33,16 +33,16 @@
                    
                         <div class="container" >
                             <div class="col-md-3 column">
-                                <a href="#" class="btn btn-block" type="button"><i class="fa fa-linkedin-square fa-5x"></i><br />Linkedin</a>
+                                <a href="<?php echo get_theme_mod( 'linkedin', $default );?>" target="_blank" class="btn btn-block" type="button"><i class="fa fa-linkedin-square fa-5x"></i><br />Linkedin</a>
                             </div>
                             <div class="col-md-3 column">
-                                <a href="#" class="btn btn-block" type="button"><i class="fa fa-github-alt fa-5x"></i><br />Github</a>
+                                <a href="<?php echo get_theme_mod( 'github', $default );?>" target="_blank" class="btn btn-block" type="button"><i class="fa fa-github-alt fa-5x"></i><br />Github</a>
                             </div>
                             <div class="col-md-3 column">
-                                <a href="#" class="btn btn-block" type="button"><i class="fa fa-bitbucket fa-5x"></i><br />Bit Bucket</a>
+                                <a href="<?php echo get_theme_mod( 'bitbucket', $default );?>" target="_blank" class="btn btn-block" type="button"><i class="fa fa-bitbucket fa-5x"></i><br />Bit Bucket</a>
                             </div>
                             <div class="col-md-3 column">
-                                <a href="#" class="btn btn-block" type="button"><i class="fa fa-android fa-5x"></i><br />Playstore</a>
+                                <a href="<?php echo get_theme_mod( 'playstore', $default );?>" target="_blank" class="btn btn-block" type="button"><i class="fa fa-android fa-5x"></i><br />Playstore</a>
                             </div>
                         </div> <!--social link container ends-->
                 </div><!--jumbotron div ends-->
@@ -124,7 +124,6 @@
 			<div class="col-md-6 column">
                 <p>
                 <span class="label label-default">Testimonials</span></p>
-                 [latest_portfolio_items count=3]
                 <blockquote>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
