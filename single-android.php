@@ -18,8 +18,7 @@
 				</div>
 				<div class="col-md-6 column">
 
-					<img src="<?php echo get_template_directory()."images/device-in-hand.png"; ?>" />
-					image
+					<?php the_post_thumbnail( ); ?>
 				</div>
 		</div><!--12 column end-->
 		<div class="col-md-12 column">

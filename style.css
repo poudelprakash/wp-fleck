@@ -55,7 +55,7 @@ ol.commentlist li.byuser {}
 ol.commentlist li.comment-author-admin {}
 ol.commentlist li.comment { border-bottom:1px dotted #666; padding:1em; }
 ol.commentlist li div.comment-author {}
-ol.commentlist li div.vcard { font:normal 16px georgia,times,serif; }
+ol.commentlist li div.vcard { font:normal; }
 ol.commentlist li div.vcard cite.fn { font-style:normal; }
 ol.commentlist li div.vcard cite.fn a.url {}
 ol.commentlist li div.vcard img.avatar { border:5px solid #ccc; float:right; margin:0 0 1em 1em; }
@@ -63,7 +63,7 @@ ol.commentlist li div.vcard img.avatar-32 {}
 ol.commentlist li div.vcard img.photo {}
 ol.commentlist li div.vcard span.says {}
 ol.commentlist li div.commentmetadata {}
-ol.commentlist li div.comment-meta { font-size:9px; }
+ol.commentlist li div.comment-meta { }
 ol.commentlist li div.comment-meta a { color:#ccc; }
 ol.commentlist li p { font-size:11px; margin:0 0 1em; }
 ol.commentlist li ul { font-size:11px; list-style:square; margin:0 0 1em 2em; }
