@@ -52,12 +52,12 @@ class theme_customizer
             'priority' => 2
         ) );
         // Bitbucket
-        $wp_manager->add_setting( 'bitbucket', array(
-            'default'        => 'https://bitbucket.org/poudelprakash/',
+        $wp_manager->add_setting( 'twitter', array(
+            'default'        => 'https://twitter/poudelprakash/',
         ) );
 
-        $wp_manager->add_control( 'bitbucket', array(
-            'label'   => 'Your Bitbucket profile',
+        $wp_manager->add_control( 'twitter', array(
+            'label'   => 'Your Twitter profile',
             'section' => 'jumbotron_links_section',
             'type'    => 'text',
             'priority' => 3

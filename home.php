@@ -39,7 +39,7 @@
                                 <a href="<?php echo get_theme_mod( 'github', $default );?>" target="_blank" class="btn btn-block" type="button"><i class="fa fa-github-alt fa-5x"></i><br />Github</a>
                             </div>
                             <div class="col-md-3 column">
-                                <a href="<?php echo get_theme_mod( 'bitbucket', $default );?>" target="_blank" class="btn btn-block" type="button"><i class="fa fa-bitbucket fa-5x"></i><br />Bit Bucket</a>
+                                <a href="<?php echo get_theme_mod( 'twitter', $default );?>" target="_blank" class="btn btn-block" type="button"><i class="fa fa-twitter fa-5x"></i><br />Twitter</a>
                             </div>
                             <div class="col-md-3 column">
                                 <a href="<?php echo get_theme_mod( 'playstore', $default );?>" target="_blank" class="btn btn-block" type="button"><i class="fa fa-android fa-5x"></i><br />Playstore</a>
