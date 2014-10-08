@@ -6,6 +6,7 @@
  * load the theme function files
  */
 include('admin/theme_customiser.php');
+require_once('inc/template-tags.php');
 //import javascripts
 function fleck_scripts_with_jquery()
 {
