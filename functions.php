@@ -7,6 +7,7 @@
  */
 include('admin/theme_customiser.php');
 require_once('inc/template-tags.php');
+require_once('inc/wp_bootstrap_navwalker.php');
 //import javascripts
 function fleck_scripts_with_jquery()
 {

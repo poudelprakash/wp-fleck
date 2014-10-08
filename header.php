@@ -64,12 +64,15 @@
                       <!-- Collect the nav links for toggling -->
                       <?php // Loading WordPress Custom Menu
                          wp_nav_menu( array(
-                            'container_class' => 'collapse navbar-collapse navbar-ex1-collapse  ',
-                            'menu_class'      => 'nav navbar-nav navbar-right',
-                            'menu_id'         => 'main-menu',
-                            'depth' => '3'
-                            //'walker'          => new Cwd_wp_bootstrapwp_Walker_Nav_Menu()
-                        ) );
+                          'menu_id'         => 'main-menu',
+                          'depth'             => 2,
+                          'container'         => 'div',
+                          'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse  ',
+                          'container_id'      => 'bs-example-navbar-collapse-1',
+                          'menu_class'        => 'nav navbar-nav',
+                          'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                          'walker'            => new wp_bootstrap_navwalker())
+                         );
                       ?>
 
                     </nav>
