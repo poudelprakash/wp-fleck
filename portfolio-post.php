@@ -4,6 +4,7 @@
 * Version: 1.1
 */
 get_header(); ?>
+<div class="col-md-9">
 <div class="container">
 	<div class="content-area">
 		<div id="container" class="site-content">
@@ -204,6 +205,9 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #container -->
 	</div><!-- .content-area -->
+	</div>
+	<div class="col-md-3">
+		<?php get_sidebar( );?>
 	</div>
 
 <?php get_footer(); ?>

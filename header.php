@@ -55,23 +55,22 @@
                       <!-- Mobile display -->
                       <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
+                          <i class="fa fa-bars" ></i>
                         </button>
+                        <a href="<?php echo home_url(); ?>" class="navbar-brand"><i class="fa fa-home"></i></a>
                       </div>
-                     
+                     <div></div>
                       <!-- Collect the nav links for toggling -->
                       <?php // Loading WordPress Custom Menu
                          wp_nav_menu( array(
-                            'container_class' => 'collapse navbar-collapse navbar-ex1-collapse ',
-                            'menu_class'      => 'nav navbar-nav',
+                            'container_class' => 'collapse navbar-collapse navbar-ex1-collapse  ',
+                            'menu_class'      => 'nav navbar-nav navbar-right',
                             'menu_id'         => 'main-menu',
                             'depth' => '3'
                             //'walker'          => new Cwd_wp_bootstrapwp_Walker_Nav_Menu()
                         ) );
                       ?>
+
                     </nav>
               </div>                           
         </div><!--row clearfix div for navigation ends-->

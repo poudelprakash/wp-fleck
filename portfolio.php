@@ -4,6 +4,7 @@ Template Name: Portfolio template
 * Version: 1.1
 */
 get_header(); ?>
+	<div class="col-md-9">
 	<div class="content-area">
 		<div id="container" class="site-content">
 			<div id="content" class="hentry">
@@ -221,5 +222,8 @@ get_header(); ?>
 			comments_template(); ?>
 		</div><!-- #container -->
 	</div><!-- .content-area -->
+	</div>
+	<div class="col-md-3">
 <?php get_sidebar(); ?>
+</div>
 <?php get_footer(); ?>

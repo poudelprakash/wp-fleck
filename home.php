@@ -54,21 +54,21 @@
 	<div class="container">
         <div class="row clearfix">
             <div class="col-md-6 column">
-                <span class="label label-default">Projets Portfolio</span>
+                <span class="label label-default">Projects Portfolio</span>
+
                 <p>
-                    <?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 4 ) ); ?>
+                    <?php $loop = new WP_Query( array( 'post_type' => 'lumia_porfolio', 'posts_per_page' => 4 ) ); ?>
 
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                    <div class="attachment-post-thumbnail">
+                    <div class="thumbnail col-md-6">
                     <?php the_post_thumbnail(); ?>
                     </div>
-                    
-                    <?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); ?>
-                    
-                    <div class="entry-content">
+                    <div class="caption col-md-6">
+                    <?php the_title( '<h2 ><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); ?>
                         <?php the_content(); ?>
-                    </div>
-                    <?php endwhile; ?>
+                        <a href="<?php echo get_permalink(); ?>" class="btn btn-primary" role="button"> Visit </a> 
+                    </div>.
+                    <?php echo "<hr />"; endwhile; ?>
                 </p>
             </div>
             <div class="col-md-6 column">
@@ -77,25 +77,16 @@
                     <?php $loop = new WP_Query( array( 'post_type' => 'android', 'posts_per_page' => 4 ) ); ?>
 
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                    <div class="attachment-post-thumbnail">
+                    <div class="thumbnail col-md-6">
                     <?php the_post_thumbnail(); ?>
                     </div>
-                    
-                    <?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); ?>
-                    
-                    <div class="entry-content">
+                    <div class="caption col-md-6">
+                    <?php the_title( '<h2 ><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); ?>
                         <?php the_content(); ?>
-                    </div>
-                    <?php endwhile; ?>
-                </p><p>
-                <ul class="pagination">
-                    <li>
-                        <a href="#">Prev</a>
-                    </li>
-                    <li>
-                        <a href="#">Next</a>
-                    </li>
-                </ul>
+                        <a href="<?php echo get_permalink(); ?>" class="btn btn-primary" role="button"> Visit </a> 
+                    </div>.
+                    
+                    <?php echo "<hr />"; endwhile; ?>
                 </p>
             </div>
         </div>

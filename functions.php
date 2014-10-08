@@ -5,7 +5,7 @@
  *
  * load the theme function files
  */
-include('admin/theme_custom.php');
+include('admin/theme_customiser.php');
 //import javascripts
 function fleck_scripts_with_jquery()
 {
@@ -15,7 +15,11 @@ function fleck_scripts_with_jquery()
 	wp_enqueue_script( 'custom-script' );
 }
 add_action( 'wp_enqueue_scripts', 'fleck_scripts_with_jquery' );
-
+//adding post thumbnails in the theme
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 200, 200, true ); // Normal post thumbnails
+    add_image_size( 'single-post-thumbnail', 400, 9999 ); // Permalink thumbnail size
+    
 //create nav menu
 	if (!function_exists('fleck_menu_setup')) :
 	function fleck_menu_setup() {
