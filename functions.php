@@ -124,7 +124,7 @@ add_action( 'widgets_init', 'fleck_widgets_init' );
 // Changing excerpt more
    function new_excerpt_more($more) {
    global $post;
-   return '… <a href="'. get_permalink($post->ID) . '">' . 'Read More &raquo;' . '</a>';
+   return '..&nbsp;&nbsp;&nbsp;<a class="btn btn-primary" role="button" href="'. get_permalink($post->ID) . '">' . 'Read More &raquo;' . '</a>';
    }
    add_filter('excerpt_more', 'new_excerpt_more');
 

@@ -3,7 +3,7 @@
 
 <div class="container">
 	<div class="row clearfix">
-		<div class="col-md-8 column">
+		<div class="col-md-9 column">
 			<?php $loop = new WP_Query( array( 'post_type' => 'android', 'posts_per_page' => 10 ) ); ?>
 
 			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
@@ -20,7 +20,7 @@
 		 
 		</div>
 				<!-- Blog Sidebar Widgets Column -->
-		<div class="col-md-4 column">
+		<div class="col-md-3 column">
 			<div class="well">
 				<?php 
 					//this is for sidebar
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 	</div>
-	<hr />
+	
 </div>
 
 

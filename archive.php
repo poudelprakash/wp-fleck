@@ -3,7 +3,7 @@
 
 <div class="container">
 	<div class="row clearfix">
-		<div class="col-md-8 column">
+		<div class="col-md-9 column">
 			<?php 
 			
 			if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -21,7 +21,7 @@
 		 
 		</div>
 				<!-- Blog Sidebar Widgets Column -->
-		<div class="col-md-4 column">
+		<div class="col-md-3 column">
 			<div class="well">
 				<?php 
 					//this is for sidebar
@@ -29,7 +29,7 @@
 			</div>
 		</div>
 	</div>
-	<hr />
+	
 </div>
 
 

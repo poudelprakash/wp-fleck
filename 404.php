@@ -38,7 +38,7 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-		<hr />
+		
 	</div>
 	
 

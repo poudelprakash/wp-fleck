@@ -60,15 +60,19 @@
                     <?php $loop = new WP_Query( array( 'post_type' => 'lumia_porfolio', 'posts_per_page' => 4 ) ); ?>
 
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                    <div class="col-md-12">
                     <div class="thumbnail col-md-6">
                     <?php the_post_thumbnail(); ?>
                     </div>
                     <div class="caption col-md-6">
-                    <?php the_title( '<h2 ><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); ?>
-                        <?php the_content(); ?>
-                        <a href="<?php echo get_permalink(); ?>" class="btn btn-primary" role="button"> Visit </a> 
-                    </div>.
-                    <?php echo "<hr />"; endwhile; ?>
+                    <?php 
+                    the_title( '<h2 ><a href="' . str_ireplace("?lumia_porfolio","portfolio/?slug",get_permalink( )). '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); ?>
+                        
+                         <br />
+
+                    </div>
+                    </div><!--outer 12 col end -->
+                    <?php endwhile; ?>
                 </p>
             </div>
             <div class="col-md-6 column">
@@ -77,16 +81,18 @@
                     <?php $loop = new WP_Query( array( 'post_type' => 'android', 'posts_per_page' => 4 ) ); ?>
 
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                    <div class="col-md-12">
                     <div class="thumbnail col-md-6">
                     <?php the_post_thumbnail(); ?>
                     </div>
                     <div class="caption col-md-6">
                     <?php the_title( '<h2 ><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); ?>
-                        <?php the_content(); ?>
-                        <a href="<?php echo get_permalink(); ?>" class="btn btn-primary" role="button"> Visit </a> 
-                    </div>.
-                    
-                    <?php echo "<hr />"; endwhile; ?>
+                        <?php the_excerpt(); ?>
+                         <br />
+
+                    </div>
+                    </div><!--outer 12 col end -->
+                    <?php endwhile; ?>
                 </p>
             </div>
         </div>

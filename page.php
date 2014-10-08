@@ -43,7 +43,7 @@
 			</div>
 		</div>
 	</div>
-	<hr />
+	
 </div>
 
  <?php get_footer( ); ?>
